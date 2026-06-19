@@ -21,8 +21,8 @@
 
 /* centrado del contenido con flexbox */
 body {
-  display: flex; /* actica el modelo de caja flexible */
-  flex-direction: column; /* dirección de los elementos flex, de arriba a abajo */
+  display: flex; /* activa el modelo de caja flexible */
+  flex-direction: column; /* invierto la direccón de los ejes */
   align-items: center; /* eje transversal (centrado horizontal), toma el ancho del
                           monitor y reparte el espacio sobrante, dejando el 
                           article en el medio */
@@ -39,6 +39,8 @@ article {
   width: 320px; /* ancho dado por Figma */
   padding: 16px;
   border-radius: 20px;
+  box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 4.77%); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
+  /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
 }
 
 img {
