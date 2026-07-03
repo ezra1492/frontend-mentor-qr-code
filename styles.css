@@ -58,12 +58,12 @@ body {
                               la altura de pantalla y reparte el espacio entre 
                               article y footer (attribution) */
   min-height: 100vh; /* altura mínima del 100% de la ventana gráfica */
-  background: var(--clr-slate300);
+  background-color: var(--clr-slate300);
 }
 
 /* estilo para el contenedor del QR code */
 article {
-  background: var(--clr-white);
+  background-color: var(--clr-white);
   width: 320px; /* ancho dado por Figma */
   padding: 16px;
   border-radius: 20px;
