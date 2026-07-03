@@ -20,6 +20,12 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Overview
 
+This is my solution to the QR Code Component challenge on Frontend Mentor.
+
+The goal of this project was to build a clean, responsive layout that matches the provided design perfectly. While working on this challenge, my main focus was moving away from random design choices and learning how to use a strict, organized CSS Design System instead.
+
+I built this project with a mobile-first approach, ensuring that the layout looks professional and scales correctly on screens of any size.
+
 ![Croquis](images/croquis.png)
 
 ## Project Evolution & Grading Context
