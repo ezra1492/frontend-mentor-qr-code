@@ -36,6 +36,14 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### What I learned
 
+> 💡 **Quick Takeaways:**
+>
+> - **Centering the Card:** I learned how to use Flexbox to perfectly center the entire card right in the middle of the screen, both vertically and horizontally.
+> - **Fixing Image Spacing:** I fixed a common bug where images leave an annoying gap at the bottom by changing the image display behavior to block.
+> - **What I Struggled With:** I struggled with moving away from quick, random spacing numbers. Instead, I forced myself to use a strict system of pre-made CSS variables to keep the spacing uniform.
+
+---
+
 During this project, I focused heavily on transitioning from raw values to a strictly structured Design System and understanding the geometric physics of rendering engines.
 
 Key architectural takeaways include:
