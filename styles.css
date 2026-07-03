@@ -21,9 +21,9 @@
   --ff-site: "Outfit", sans-serif;
 
   /* FONT SIZES */
-  --fs-l: 1.375rem; /* 22px title */
-  --fs-s: 0.9375rem; /* 15px description */
-  --fs-xs: 0.6875rem; /* 11px attribution */
+  --fs-title: 1.375rem; /* 22px */
+  --fs-description: 0.9375rem; /* 15px */
+  --fs-attribution: 0.6875rem; /* 11px */
 
   /* FONT WEIGHTS */
   --fw-title: 700;
@@ -32,6 +32,19 @@
   /* LINE HEIGHTS */
   --lh-title: 1.2;
   --lh-description: 1.4;
+
+  /* PRIMITIVE SPACING */
+  --sp-200: 1rem; /* 16px */
+  --sp-300: 1.5rem; /* 24px */
+  --sp-500: 2.5rem; /* 40px */
+
+  /* SEMANTIC SPACING */
+  --padding-qr-card: var(--sp-200) var(--sp-200) var(--sp-500) var(--sp-200); /* top, right: 16px, bottom: 40px, left: 16px */
+  --padding-title: var(--sp-300); /* 24px */
+  --padding-description: var(--sp-200) var(--sp-200) 0 var(--sp-200); /* top, right: 16px, bottom: 0px, left: 16px */
+  --br-l: 1.25rem; /* 20px */
+  --br-s: 0.625rem; /* 10px */
+  --bs-qr-card: 0 25px 25px 0px var(--clr-shadow); /* 0px in the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
 }
 
 /* ==================
@@ -40,9 +53,9 @@
 
 /* estilo de los créditos, trasladados del html */
 .attribution {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-attribution);
   text-align: center;
-  padding-bottom: 16px;
+  padding-bottom: var(--padding-qr-card);
   position: absolute; /* quita el orden gravitacional normal del texto
                          haciéndolo flotar en una capa separada*/
   bottom: 0; /* posiciona el texto en la parte inferior de la ventana */
@@ -70,9 +83,11 @@ body {
 article {
   background-color: var(--clr-white);
   width: 320px; /* ancho dado por Figma */
-  padding: 16px;
-  border-radius: 20px;
-  box-shadow: 0 25px 25px 0px var(--clr-shadow); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
+  padding: var(--padding-qr-card); /* acolchado de 16px en todos los lados */
+  border-radius: var(--br-l);
+  box-shadow: var(
+    --bs-qr-card
+  ); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
   /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
 }
 
@@ -82,28 +97,27 @@ img {
                      elimina el espacio en blanco alrededor. La imagen 
                      respeta los padding del article */
   height: auto; /* previene deformación */
-  border-radius: 10px;
+  border-radius: var(--br-s);
 }
 
 h1 {
   text-align: center;
   color: var(--clr-slate900);
-  font-size: var(--fs-l);
+  font-size: var(--fs-title);
   line-height: var(--lh-title);
-  letter-spacing: 0px;
   font-weight: var(--fw-title);
-  padding: 24px 16px 16px; /* 24px para separar el título del QR code,
-                           y 16px para separar el título del párrafo */
+  padding-top: var(--padding-title);
 }
 
 p {
   text-align: center;
   color: var(--clr-slate500);
-  font-size: var(--fs-s);
+  font-size: var(--fs-description);
   line-height: var(--lh-description);
-  letter-spacing: 0.2px;
   font-weight: var(--fw-description);
-  padding: 0 16px 24px; /* crea un acolchado de 16px en los lados y 
+  padding: var(
+    --padding-description
+  ); /* crea un acolchado de 16px en los lados y 
                            24px en la parte inferior del article (sumando
                            los 16px del padding del article hacen los 40px
                            que se muestran en Figma) */
