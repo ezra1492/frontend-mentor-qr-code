@@ -12,12 +12,12 @@
  ==================== */
 :root {
   /* COLOR PALETTE */
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-slate300: hsl(212, 45%, 89%);
-  --clr-slate500: hsl(216, 15%, 48%);
-  --clr-slate900: hsl(218, 44%, 22%);
-  --clr-attribution: hsl(228, 45%, 44%);
-  --clr-shadow: rgba(0, 0, 0, 4.77%);
+  --clr-white: rgba(255 255 255);
+  --clr-slate300: rgba(214 226 240);
+  --clr-slate500: rgba(104 119 141);
+  --clr-slate900: rgba(31 44 61);
+  --clr-attribution: rgba(62 84 163);
+  --clr-shadow: rgba(0 0 0 / 4.77%);
 
   /* TYPOGRAPHY */
   --ff-site: "Outfit", sans-serif;
