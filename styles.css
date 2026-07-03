@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+/* DESIGN TOKEN VAULT */
+:root {
+  /* COLOR PALETTE */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-slate300: hsl(212, 45%, 89%);
+  --clr-slate500: hsl(216, 15%, 48%);
+  --clr-slate900: hsl(218, 44%, 22%);
+  --clr-attribution: hsl(228, 45%, 44%);
+  --clr-shadow: rgba(0, 0, 0, 4.77%);
+}
 /* estilo de los créditos, trasladados del html */
 .attribution {
   font-size: 0.6875rem;
@@ -16,7 +26,7 @@
   bottom: 0; /* posiciona el texto en la parte inferior de la ventana */
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--clr-attribution);
 }
 
 /* centrado del contenido con flexbox */
@@ -30,16 +40,16 @@ body {
                               la altura de pantalla y reparte el espacio entre 
                               article y footer (attribution) */
   min-height: 100vh; /* altura mínima del 100% de la ventana gráfica */
-  background: hsl(212, 45%, 89%);
+  background: var(--clr-slate300);
 }
 
 /* estilo para el contenedor del QR code */
 article {
-  background: hsl(0, 0%, 100%);
+  background: var(--clr-white);
   width: 320px; /* ancho dado por Figma */
   padding: 16px;
   border-radius: 20px;
-  box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 4.77%); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
+  box-shadow: 0 25px 25px 0px var(--clr-shadow); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
   /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
 }
 
@@ -54,7 +64,7 @@ img {
 
 h1 {
   text-align: center;
-  color: hsl(218, 44%, 22%);
+  color: var(--clr-slate900);
   font-size: 22px;
   line-height: 120%;
   letter-spacing: 0px;
@@ -65,7 +75,7 @@ h1 {
 
 p {
   text-align: center;
-  color: hsl(216, 15%, 48%);
+  color: var(--clr-slate500);
   font-size: 15px;
   line-height: 140%;
   letter-spacing: 0.2px;
