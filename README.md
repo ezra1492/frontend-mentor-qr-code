@@ -17,7 +17,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ![Croquis](images/croquis.png)
 ![FM Feedback 1](images/Eval1.png)
-![FM Feedback 2](#)
 
 ### Links
 
