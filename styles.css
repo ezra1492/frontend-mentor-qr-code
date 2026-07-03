@@ -56,9 +56,6 @@
   font-size: var(--fs-attribution);
   text-align: center;
   padding-bottom: var(--padding-qr-card);
-  position: absolute; /* quita el orden gravitacional normal del texto
-                         haciéndolo flotar en una capa separada*/
-  bottom: 0; /* posiciona el texto en la parte inferior de la ventana */
 }
 .attribution a {
   color: var(--clr-attribution);
