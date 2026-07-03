@@ -80,7 +80,7 @@ body {
 }
 
 /* estilo para el contenedor del QR code */
-article {
+.qr-code {
   background-color: var(--clr-white);
   width: 320px; /* ancho dado por Figma */
   padding: var(--padding-qr-card); /* acolchado de 16px en todos los lados */
@@ -91,7 +91,7 @@ article {
   /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
 }
 
-img {
+.qr-code__img {
   width: 100%; /* forzar al QR code a ocupar el ancho máximo disponible (del contenedor) */
   display: block; /* dejando que se muestre como un elemento de bloque,
                      elimina el espacio en blanco alrededor. La imagen 
@@ -100,7 +100,7 @@ img {
   border-radius: var(--br-s);
 }
 
-h1 {
+.qr-code__title {
   text-align: center;
   color: var(--clr-slate900);
   font-size: var(--fs-title);
@@ -109,7 +109,7 @@ h1 {
   padding-top: var(--padding-title);
 }
 
-p {
+.qr-code__description {
   text-align: center;
   color: var(--clr-slate500);
   font-size: var(--fs-description);
