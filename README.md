@@ -5,18 +5,44 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Overview](#overview)
+- [Project Evolution & Grading Context](#project-evolution--grading-context)
+  - [Why the Score Changed](#why-the-score-changed)
+  - [How I Improved](#how-i-improved)
+
   - [Links](#links)
+
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [AI Collaboration](#ai-collaboration)
+  - [Useful resources (AI Collaboration)](#useful-resources-ai-collaboration)
 - [Author](#author)
 
 ## Overview
 
 ![Croquis](images/croquis.png)
+
+## Project Evolution & Grading Context
+
+This was my very first frontend project. Over three weeks, my focus shifted from just making the code work to learning professional workflows. Here is why my score went from **8.9** to **8.8**:
+
+### Why the Score Changed
+
+- **First Review (8.9/10):** The automated system only checked my code. It did not look at my documentation or commit history.
+- **Second Review (8.8/10):** The system updated its criteria to evaluate documentation. Three weeks ago, my only goal was learning HTML and CSS. Clean commits and detailed READMEs were not my priority yet.
+
 ![FM Feedback 1](images/Eval1.png)
+
+### How I Improved
+
+I did not see the 8.8 score as a downgrade, but as a roadmap to grow. I immediately updated the project to meet these higher standards:
+
+1. **Clearer README:** I added a simple summary so beginner developers can easily follow my notes.
+2. **Better Commits:** I switched to a professional git workflow using Conventional Commits (like `fix(readme): :memo:`).
+
+This small change in my score reflects a stricter test that actually helped me become a better developer.
+
+![FM Feedback 1](images/Eval2.png)
 
 ### Links
 
@@ -43,11 +69,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ---
 
-During this project, I focused heavily on transitioning from raw values to a strictly structured Design System and understanding the geometric physics of rendering engines.
+During this project, I focused on moving away from random values and learned how to use a structured Design System. I also spent time understanding how web browsers calculate layouts and spacing.
 
-Key architectural takeaways include:
+Here are the most important things I learned:
 
-1. **Orthogonal Axis Rotation:** Deepened my understanding of how changing `flex-direction` to `column` completely rotates the main and cross axes 90 degrees.
+1. **How Flexbox Axes Rotate:** I learned that when you change `flex-direction` to `column`, the main axis and the cross axis swap places completely.
 
 ```css
 /* FLEXBOX CENTERING + INHERITABLE FONT */
@@ -62,7 +88,7 @@ body {
 }
 ```
 
-2. **Inline Baseline Descender Bug:** Learned how switching the display of image elements to `block` completely eliminates unwanted whitespace wrapping.
+2. **Fixing the Image Spacing Bug:** I learned why images sometimes have a small, unwanted gap underneath them. By changing the image to `display: block`, I completely removed that extra whitespace.
 
 ```css
 /* QR CODE IMAGE */
@@ -74,7 +100,7 @@ body {
 }
 ```
 
-3. **Refactoring Hardcoded Values:** Successfully replaced arbitrary values with an atomic, strict primitive layout scale (`var(--sp-300)`).
+3. **Replacing Hardcoded Numbers:** I successfully replaced random spacing numbers with clean, reusable layout variables like `var(--sp-300)` to keep my design uniform.
 
 ```css
 /* QR CODE CARD */
@@ -96,12 +122,16 @@ body {
 - **Systematic Architecture:** I plan to continue enforcing strict Design Token structures from the very beginning of my upcoming layouts.
 - **Git Mastery:** Transitioning towards more modular and atomic commit habits using professional standards.
 
-### Useful resources (AI Collaboration)
+### Useful Resources (AI Collaboration)
 
-- **Website:** [Gitmoji](https://gitmoji.dev/) - It made it significantly easier to understand and adopt the practice of **Atomic Commits** through visual semantic tracking.
-- **Tool:** Gemini (NotebookLM style workflows)
-- **Use Case:** Validating clean architecture, translating inline technical explanations into idiomatic English, and structuring a professional development workspace.
-- **Outcome:** Significantly reduced friction between local Git staging and GitHub deployment, while accelerating the integration of advanced concepts like Design Tokens.
+- **[Gitmoji](https://gitmoji.dev)**: This website helped me learn how to make small, clean commits. Using emojis made it much easier to track my changes visually.
+- **Gemini (NotebookLM-style workflows)**: I used this AI tool to check my code structure, translate my notes into clear English, and keep my workspace organized.
+
+**What I achieved using these tools:**
+
+- I had fewer issues when pushing code from my computer to GitHub.
+- I learned how to use advanced concepts like Design Tokens much faster.
+- I built a smoother, faster workflow for my daily coding tasks.
 
 ## Author
 
