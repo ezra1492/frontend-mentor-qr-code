@@ -64,9 +64,9 @@ QR CODE RULES ↓
 
 /* CREDITS, I BRING THEM TO ITS PLACE */
 .attribution {
+  padding-bottom: var(--padding-qr-card);
   font-size: var(--fs-attribution);
   text-align: center;
-  padding-bottom: var(--padding-qr-card);
 }
 .attribution a {
   color: var(--clr-attribution);
@@ -74,18 +74,17 @@ QR CODE RULES ↓
 
 /* FLEXBOX CENTERING + INHERITABLE FONT */
 body {
-  background-color: var(--clr-slate300);
-  min-height: 100vh; /* Force body to take at least 100% of the viewport height */
-  font-family: var(--ff-site);
   display: flex; /* Activate Flexbox context*/
   flex-direction: column; /* Main axis is now vertical, cross axis is horizontal*/
   align-items: center; /* CROSS AXIS (Horizontal): Takes the viewport width and centers the content horizontally */
   justify-content: center; /* MAIN AXIS (Vertical): Distributes the remaining vertical space between the article and footer */
+  min-height: 100vh; /* Force body to take at least 100% of the viewport height */
+  font-family: var(--ff-site);
+  background-color: var(--clr-slate300);
 }
 
 /* QR CODE CARD */
 .qr-code {
-  background-color: var(--clr-white);
   width: var(--width-qr-card);
   padding: var(
     --padding-qr-card
@@ -94,34 +93,35 @@ body {
   box-shadow: var(
     --bs-qr-card
   ); /* Horizontal axis 0px, vertical 24px, blur 24px, spread 0px, and rgba black with 4.77% opacity */
+  background-color: var(--clr-white);
 }
 
 /* QR CODE IMAGE */
 .qr-code__img {
+  display: block; /* Eliminates the default inline baseline whitespace. The image perfectly respects the article's padding */
   width: 100%; /* Spans the full available width, preventing container overflow */
   height: auto; /* Maintains the original aspect ratio to prevent image distortion */
-  display: block; /* Eliminates the default inline baseline whitespace. The image perfectly respects the article's padding */
   border-radius: var(--br-s);
 }
 
 .qr-code__title {
-  text-align: center;
-  color: var(--clr-slate900);
-  font-size: var(--fs-title);
-  line-height: var(--lh-title);
-  font-weight: var(--fw-title);
   padding-top: var(--padding-title);
+  text-align: center;
+  line-height: var(--lh-title);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-title);
+  color: var(--clr-slate900);
 }
 
 .qr-code__description {
-  text-align: center;
-  color: var(--clr-slate500);
-  font-size: var(--fs-description);
-  line-height: var(--lh-description);
-  font-weight: var(--fw-description);
   padding: var(
     --padding-description
   ); /* Applied as: top 16px, left/right 16px, bottom 0px */
+  text-align: center;
+  line-height: var(--lh-description);
+  font-size: var(--fs-description);
+  font-weight: var(--fw-description);
+  color: var(--clr-slate500);
 }
 /* ============
 QR CODE RULES ↑
