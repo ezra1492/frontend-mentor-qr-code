@@ -39,6 +39,11 @@
   --sp-500: 2.5rem; /* 40px */
 
   /* SEMANTIC SPACING */
+  --width-qr-card: clamp(
+    18rem,
+    90vw,
+    20rem
+  ); /* 288px, 90% of the viewport width, 320px */
   --padding-qr-card: var(--sp-200) var(--sp-200) var(--sp-500) var(--sp-200); /* top, right: 16px, bottom: 40px, left: 16px */
   --padding-title: var(--sp-300); /* 24px */
   --padding-description: var(--sp-200) var(--sp-200) 0 var(--sp-200); /* top, right: 16px, bottom: 0px, left: 16px */
@@ -79,7 +84,7 @@ body {
 /* estilo para el contenedor del QR code */
 .qr-code {
   background-color: var(--clr-white);
-  width: 320px; /* ancho dado por Figma */
+  width: var(--width-qr-card);
   padding: var(--padding-qr-card); /* acolchado de 16px en todos los lados */
   border-radius: var(--br-l);
   box-shadow: var(
