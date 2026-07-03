@@ -1,4 +1,6 @@
-/* inicializar los márgenes y rellenos */
+/* =========
+ BOX RESET ↓
+============ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,19 +46,23 @@
     90vw,
     20rem
   ); /* 288px, 90% of the viewport width, 320px */
-  --padding-qr-card: var(--sp-200) var(--sp-200) var(--sp-500) var(--sp-200); /* top, right: 16px, bottom: 40px, left: 16px */
+  --padding-qr-card: var(--sp-200) var(--sp-200) var(--sp-500) var(--sp-200); /* TRouBLe: 16px top/left/right, and 40px bottom */
   --padding-title: var(--sp-300); /* 24px */
-  --padding-description: var(--sp-200) var(--sp-200) 0 var(--sp-200); /* top, right: 16px, bottom: 0px, left: 16px */
+  --padding-description: var(--sp-200) var(--sp-200) 0; /* Top 16px, left/right: 16px, bottom: 0px,  */
   --br-l: 1.25rem; /* 20px */
   --br-s: 0.625rem; /* 10px */
-  --bs-qr-card: 0 25px 25px 0px var(--clr-shadow); /* 0px in the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
+  --bs-qr-card: 0 25px 25px 0px var(--clr-shadow); /* 0px X-axis, 25px Y-axis, 25px blur, 0px spread, 4.77% alpha opacity black */
 }
 
 /* ==================
  DESIGN TOKEN VAULT ↑
  ==================== */
 
-/* estilo de los créditos, trasladados del html */
+/* ============
+QR CODE RULES ↓
+================ */
+
+/* CREDITS, I BRING THEM TO ITS PLACE */
 .attribution {
   font-size: var(--fs-attribution);
   text-align: center;
@@ -66,39 +72,35 @@
   color: var(--clr-attribution);
 }
 
-/* centrado del contenido con flexbox */
+/* FLEXBOX CENTERING + INHERITABLE FONT */
 body {
-  font-family: var(--ff-site);
-  display: flex; /* activa el modelo de caja flexible */
-  flex-direction: column; /* invierto la direccón de los ejes */
-  align-items: center; /* eje transversal (centrado horizontal), toma el ancho del
-                          monitor y reparte el espacio sobrante, dejando el 
-                          article en el medio */
-  justify-content: center; /* eje principal (centrado vertical), toma el 100% de
-                              la altura de pantalla y reparte el espacio entre 
-                              article y footer (attribution) */
-  min-height: 100vh; /* altura mínima del 100% de la ventana gráfica */
   background-color: var(--clr-slate300);
+  min-height: 100vh; /* Force body to take at least 100% of the viewport height */
+  font-family: var(--ff-site);
+  display: flex; /* Activate Flexbox context*/
+  flex-direction: column; /* Main axis is now vertical, cross axis is horizontal*/
+  align-items: center; /* CROSS AXIS (Horizontal): Takes the viewport width and centers the content horizontally */
+  justify-content: center; /* MAIN AXIS (Vertical): Distributes the remaining vertical space between the article and footer */
 }
 
-/* estilo para el contenedor del QR code */
+/* QR CODE CARD */
 .qr-code {
   background-color: var(--clr-white);
   width: var(--width-qr-card);
-  padding: var(--padding-qr-card); /* acolchado de 16px en todos los lados */
+  padding: var(
+    --padding-qr-card
+  ); /* Inner spacing: 16px top/left/right, and 40px bottom */
   border-radius: var(--br-l);
   box-shadow: var(
     --bs-qr-card
-  ); /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
-  /* 0px en the horizontal axis, 25px on the vertical, 25px of blur, 0px of spread and rgba black with 4.77% of opacity */
+  ); /* Horizontal axis 0px, vertical 25px, blur 25px, spread 0px, and rgba black with 4.77% opacity */
 }
 
+/* QR CODE IMAGE */
 .qr-code__img {
-  width: 100%; /* forzar al QR code a ocupar el ancho máximo disponible (del contenedor) */
-  display: block; /* dejando que se muestre como un elemento de bloque,
-                     elimina el espacio en blanco alrededor. La imagen 
-                     respeta los padding del article */
-  height: auto; /* previene deformación */
+  width: 100%; /* Spans the full available width, preventing container overflow */
+  height: auto; /* Maintains the original aspect ratio to prevent image distortion */
+  display: block; /* Eliminates the default inline baseline whitespace. The image perfectly respects the article's padding */
   border-radius: var(--br-s);
 }
 
@@ -119,8 +121,8 @@ body {
   font-weight: var(--fw-description);
   padding: var(
     --padding-description
-  ); /* crea un acolchado de 16px en los lados y 
-                           24px en la parte inferior del article (sumando
-                           los 16px del padding del article hacen los 40px
-                           que se muestran en Figma) */
+  ); /* Applied as: top 16px, left/right 16px, bottom 0px */
 }
+/* ============
+QR CODE RULES ↑
+================ */
