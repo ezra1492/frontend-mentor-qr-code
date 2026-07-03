@@ -51,7 +51,7 @@
   --padding-description: var(--sp-200) var(--sp-200) 0; /* Top 16px, left/right: 16px, bottom: 0px,  */
   --br-l: 1.25rem; /* 20px */
   --br-s: 0.625rem; /* 10px */
-  --bs-qr-card: 0 25px 25px 0px var(--clr-shadow); /* 0px X-axis, 25px Y-axis, 25px blur, 0px spread, 4.77% alpha opacity black */
+  --bs-qr-card: 0 var(--sp-300) var(--sp-300) 0px var(--clr-shadow); /* 0px X-axis, 24px Y-axis, 24px blur, 0px spread, 4.77% alpha opacity black */
 }
 
 /* ==================
@@ -93,7 +93,7 @@ body {
   border-radius: var(--br-l);
   box-shadow: var(
     --bs-qr-card
-  ); /* Horizontal axis 0px, vertical 25px, blur 25px, spread 0px, and rgba black with 4.77% opacity */
+  ); /* Horizontal axis 0px, vertical 24px, blur 24px, spread 0px, and rgba black with 4.77% opacity */
 }
 
 /* QR CODE IMAGE */
