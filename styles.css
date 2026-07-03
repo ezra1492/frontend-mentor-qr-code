@@ -64,7 +64,7 @@ QR CODE RULES ↓
 
 /* CREDITS, I BRING THEM TO ITS PLACE */
 .attribution {
-  padding-bottom: var(--padding-qr-card);
+  margin-top: var(--sp-500);
   font-size: var(--fs-attribution);
   text-align: center;
 }
